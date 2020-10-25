@@ -1,0 +1,17 @@
+.picture{
+
+  &__cps{
+    height: auto;
+    width: 100%;
+    @media  (min-width: map-get($screen, "pad")){
+      border-radius: 3%;
+      height: 208px;
+      width: 360px;
+      margin-left: 48px;
+    }
+    @media (min-width:  map-get($screen, "desktop-small")) {
+      min-width: 532px;
+      height: 307px;
+    }
+  }
+}

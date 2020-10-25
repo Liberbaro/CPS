@@ -1,0 +1,19 @@
+.order-button{
+  color: map-get($colors, "white");
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: -0.15px;
+  background-color: map-get($colors, 'pink');
+  background-image: url("../img/icon/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: 85% 50%;
+  border-radius: 16px;
+  text-transform: uppercase;
+  padding: 4px 40px 4px 12px;
+  margin-left: 20px;
+  margin-right: 24px;
+
+}
+
+

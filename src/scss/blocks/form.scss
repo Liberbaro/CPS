@@ -1,0 +1,68 @@
+.form{
+  display: flex;
+  flex-direction: column;
+  &__input{
+    height: 48px;
+    width: 288px;
+    background: map-get($colors, "white");
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: map-get($colors, "light-grey");
+    margin-bottom: 16px;
+
+    @media (min-width: map-get($screen, "desktop-big")) {
+      width: 376px;
+    }
+
+    &::placeholder{
+      color: map-get($colors, "light-grey");
+    }
+
+
+
+
+  }
+
+
+  &__info{
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    margin-bottom: 23px;
+    margin-right: 16px;
+    @media (min-width: map-get($screen, "desktop-big")) {
+      margin-bottom: 27px;
+      margin-right: 32px;
+    }
+  }
+
+  &__link{
+    color: map-get($colors, "pink");
+  }
+
+  &__order-button{
+    margin: 0 16px 0 auto;
+    font-family: $fonts;
+    font-size: 12px;
+    line-height: 24px;
+    @media (min-width: map-get($screen, "desktop-big")) {
+      margin-right: 32px;
+      margin-bottom: 16px;
+    }
+  }
+
+
+  &__textarea{
+    align-self: end;
+    height: 118px;
+    padding: 12px 0 70px 16px;
+
+  }
+
+
+}
+
+
+
+

@@ -1,0 +1,15 @@
+
+.wrapper {
+  @media (min-width: map-get($screen, "tv")) {
+    width: 1920px;
+    position: relative;
+    box-shadow: 0 0 55px 10px map-get($colors, "grey");
+
+  }
+  @media (min-width: 4000px) {
+    width: 1920px;
+    position: relative;
+    box-shadow: 0 0 55px 10px map-get($colors, "grey");
+
+  }
+}

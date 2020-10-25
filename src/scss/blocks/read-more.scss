@@ -1,0 +1,38 @@
+.read-more{
+  border: none;
+  background-color: map-get($colors, "white-grey");
+  font-family: $fonts;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  position: relative;
+  padding-left: 20px;
+
+    &::before{
+      content: "";
+      background-image: url("../img/icon/read-more.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 50px;
+      height: 50px;
+      padding-right:40px;
+      transition-duration: 0.3s;
+      position: absolute;
+      top: -10px;
+      left: -20px;
+    }
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    &--hide{
+      transition-duration: 0.3s;
+        &::before{
+              transform: rotate(540deg);
+        }
+    }
+
+}
+

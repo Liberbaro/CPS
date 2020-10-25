@@ -1,0 +1,14 @@
+.logo{
+  display: flex;
+  transition: transform 0.5s  100ms,
+              background-image 1s  100ms,
+              filter 1s  100ms;
+
+    &:hover{
+      transform: scale(1.05);
+      filter: contrast(480%);
+      cursor: pointer;
+    }
+
+
+}
