@@ -5,7 +5,7 @@ const openButtonsChatMenu = document.querySelectorAll(".icon--feedback");
 const openButtonsCallMenu = document.querySelectorAll(".icon--call");
 const closeButtonMenu= document.querySelectorAll(".modal > .icon--close-btn");
 
-///////////////////////////////***//
+
 
 
 const closeModalMenu = function () {
@@ -39,7 +39,7 @@ const openModalMenu =function (modalName){
 
 const  openButtonsCallMenuClickHandler = () =>  openModalMenu(modalCallMenu) ;
 const  openButtonsChatMenuClickHandler = () =>  openModalMenu(modalChatMenu) ;
-const closeButtonMenuClickHandler = () =>  closeModalMenu() ;
+const closeButtonMenuClickHandler = () =>  closeModalMenu();
 const escapeKeyDownModalClickHandler  = (evt) => {
   if ( evt.keyCode == 27 ) {
     closeModalMenu()
@@ -47,8 +47,8 @@ const escapeKeyDownModalClickHandler  = (evt) => {
   else {
     return false;
   }
-}
-const overlayModalClickHandler  = () =>  closeModalMenu() ;
+};
+const overlayModalClickHandler  = () =>  closeModalMenu();
 
 
 

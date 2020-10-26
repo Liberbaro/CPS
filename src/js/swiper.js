@@ -2,6 +2,8 @@ const swiperWidth = window.matchMedia("(min-width:768px)");
 const brandsContainer = document.querySelector(".swiper-container--brands");
 const priceContainer = document.querySelector(".swiper-container--price");
 const technicsContainer = document.querySelector(".swiper-container--technics");
+
+
 const swiperProperties = {
   spaceBetween : 16,
   slidesPerView : "auto",
@@ -38,26 +40,14 @@ const checkWidthDocumentHandler = function() {
       return false;
     }
 newSwiperBrands = new Swiper( brandsContainer, swiperProperties );
-
 newSwiperPrice = new Swiper( priceContainer, swiperProperties);
-
 newSwiperPrice.width = 260,
 newSwiperPrice.height = 200;
-
-
-
 newSwiperTechnics = new Swiper( technicsContainer, swiperProperties);
-
-
-
 swiperOn  = true;
-
-
     }
-
 };
 
 
 document.addEventListener("DOMContentLoaded", checkWidthDocumentHandler);
 swiperWidth.addEventListener( "change", checkWidthDocumentHandler);
-//swiperWidth.addListener(checkWidthDocumentHandler);

@@ -29,22 +29,19 @@ const closeMenu = function () {
 
 const openMenuBtnClickHandler = () =>  openMenu();
 const closeMenuBtnClickHandler = () => {
-  if (  !modalCallMenu.classList.contains("modal--open") ||  !modalChatMenu.classList.contains("modal--open")) {
+  if (!modalCallMenu.classList.contains("modal--open") || !modalChatMenu.classList.contains("modal--open")) {
     closeMenu()
   }
 };
-const escapeKeyDownClickHandler  = (evt) => {
+const escapeKeyDownClickHandler = (evt) => {
   if ( evt.keyCode == 27 &&  !modalCallMenu.classList.contains("modal--open") &&  !modalChatMenu.classList.contains("modal--open")) {
     closeMenu()
   }
   else {
     return false;
   }
-}
+};
 const overlayMenuClickHandler  = () =>  closeMenu() ;
-
-
-
 
 
 openMenuBtn.addEventListener("click", openMenuBtnClickHandler);
