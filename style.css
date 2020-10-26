@@ -238,7 +238,7 @@ input:active {
   @media (min-width: 1400px) {
     .main__navigation {
       height: auto; } }
-  @media (min-width: 1906px) {
+  @media (min-width: 1875px) {
     .main__navigation {
       margin: 100px auto 0 0;
       position: relative;
@@ -842,8 +842,11 @@ input:active {
       padding-left: 15px; } }
   @media (min-width: 1440px) {
     .price__header {
-      grid-template-columns: 50% 5% 32%;
+      grid-template-columns: 49% 12% 20%;
       padding-left: 15px; } }
+  @media (min-width: 1700px) {
+    .price__header {
+      grid-template-columns: 54.4% 1% 31%; } }
 
 .price__list {
   display: flex;
@@ -965,10 +968,10 @@ input:active {
   @media (min-width: 1120px) {
     .main-footer {
       margin-left: 360px;
-      padding: 32px 31px; } }
+      padding: 32px 23px; } }
   @media (min-width: 1440px) {
     .main-footer {
-      padding: 32px 24px 25px; } }
+      padding: 32px 42px 25px; } }
   .main-footer__trademark {
     display: flex;
     width: 218px;
