@@ -19,12 +19,15 @@
 
       @media (min-width: map-get($screen, "desktop-small")) {
         margin-left: 360px;
-      padding: 32px 31px;
+      padding: 32px 23px;
       }
 
       @media (min-width: map-get($screen, "desktop-big")) {
-        padding: 32px 24px 25px;
+        padding: 32px 42px 25px;
       }
+
+
+
 
       &__trademark{
       display: flex;

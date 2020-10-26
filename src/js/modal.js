@@ -3,13 +3,12 @@ const modalCallMenu = document.querySelector(".modal--call");
 const overlayModal =  document.querySelector(".overlay--modal");
 const openButtonsChatMenu = document.querySelectorAll(".icon--feedback");
 const openButtonsCallMenu = document.querySelectorAll(".icon--call");
-const closeButtonMenu= document.querySelectorAll(".icon--close-btn");
+const closeButtonMenu= document.querySelectorAll(".modal > .icon--close-btn");
 
-
+///////////////////////////////***//
 
 
 const closeModalMenu = function () {
-  modalActive = false;
   modalCallMenu.classList.remove("modal--open");
   modalChatMenu.classList.remove("modal--open");
   overlayModal.classList.remove("overlay--active");
@@ -17,7 +16,7 @@ const closeModalMenu = function () {
   closeButtonMenu.forEach((closeButtons) => closeButtons.removeEventListener(`click`,  closeButtonMenuClickHandler));
   openButtonsCallMenu.forEach((button) => button.addEventListener("click", openButtonsCallMenuClickHandler ));
   openButtonsChatMenu.forEach((button) => button.addEventListener("click", openButtonsChatMenuClickHandler ));
-  document.removeEventListener("keydown", escapeKeyDowunModalClickHandler);
+  document.removeEventListener("keydown", escapeKeyDownModalClickHandler);
 }
 
 
@@ -25,24 +24,23 @@ const closeModalMenu = function () {
 
 
 const openModalMenu =function (modalName){
-  modalActive = true;
   modalName.classList.add("modal--open");
   openButtonsCallMenu.forEach((button) => button.removeEventListener("click", openButtonsCallMenuClickHandler));
   openButtonsChatMenu.forEach((button) => button.removeEventListener("click", openButtonsChatMenuClickHandler));
   overlayModal.classList.add("overlay--active");
   overlayModal.addEventListener("click",  overlayModalClickHandler);
   closeButtonMenu.forEach((closeButtons) => closeButtons.addEventListener(`click`, closeButtonMenuClickHandler));
-  document.addEventListener("keydown", escapeKeyDowunModalClickHandler);
+  document.addEventListener("keydown", escapeKeyDownModalClickHandler);
 }
 
 
 
 
 
-const  openButtonsCallMenuClickHandler = () => {  openModalMenu(modalCallMenu) };
-const  openButtonsChatMenuClickHandler = () => {  openModalMenu(modalChatMenu) };
-const closeButtonMenuClickHandler = () => { closeModalMenu() };
-const escapeKeyDowunModalClickHandler  = (evt) => {
+const  openButtonsCallMenuClickHandler = () =>  openModalMenu(modalCallMenu) ;
+const  openButtonsChatMenuClickHandler = () =>  openModalMenu(modalChatMenu) ;
+const closeButtonMenuClickHandler = () =>  closeModalMenu() ;
+const escapeKeyDownModalClickHandler  = (evt) => {
   if ( evt.keyCode == 27 ) {
     closeModalMenu()
   }
@@ -50,7 +48,7 @@ const escapeKeyDowunModalClickHandler  = (evt) => {
     return false;
   }
 }
-const overlayModalClickHandler  = () => {  closeModalMenu() };
+const overlayModalClickHandler  = () =>  closeModalMenu() ;
 
 
 

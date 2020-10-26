@@ -14,8 +14,11 @@
       padding-left: 15px;
     }
     @media (min-width: map-get($screen, "desktop-big")) {
-      grid-template-columns: 50% 5% 32%;
+      grid-template-columns: 49% 12% 20%;
       padding-left: 15px;
+    }
+    @media (min-width: 1700px) {
+      grid-template-columns: 54.4% 1% 31%;
     }
   }
 

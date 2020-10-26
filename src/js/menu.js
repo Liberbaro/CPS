@@ -1,7 +1,9 @@
 const menu = document.querySelector(".menu");
 const overlayMenu =  document.querySelector(".overlay--menu");
 const openMenuBtn = document.querySelector(".header__burger-button ");
-const closeMenuBtn= document.querySelectorAll(".icon--close-btn");
+const closeMenuBtn= document.querySelector(".menu__header-menu > .icon--close-btn");
+const modalChatMenu = document.querySelector(".modal--feedback");
+const modalCallMenu = document.querySelector(".modal--call");
 
 
 
@@ -10,9 +12,8 @@ const openMenu = function() {
   overlayMenu.classList.toggle("overlay--active");
   overlayMenu.addEventListener("click", overlayMenuClickHandler);
   openMenuBtn.removeEventListener("click", openMenuBtnClickHandler);
-  closeMenuBtn.forEach((closeButtons) => closeButtons.addEventListener(`click`, closeMenuBtnClickHandler));
-  document.addEventListener("keydown", escapeKeyDowunClickHandler);
-  modalActive = false;
+  closeMenuBtn.addEventListener(`click`, closeMenuBtnClickHandler);
+  document.addEventListener("keydown", escapeKeyDownClickHandler);
 }
 
 
@@ -21,28 +22,26 @@ const closeMenu = function () {
   menu.classList.remove("menu--active");
   overlayMenu.classList.remove("overlay--active");
   overlayMenu.removeEventListener("click", overlayMenuClickHandler);
-  document.removeEventListener("keydown", escapeKeyDowunClickHandler)
-  closeMenuBtn.forEach((closeButtons) => closeButtons.removeEventListener(`click`, closeMenuBtnClickHandler));
+  document.removeEventListener("keydown", escapeKeyDownClickHandler)
+  closeMenuBtn.removeEventListener(`click`, closeMenuBtnClickHandler);
   openMenuBtn.addEventListener("click", openMenuBtnClickHandler);
 }
 
-const openMenuBtnClickHandler = () => {  openMenu() };
+const openMenuBtnClickHandler = () =>  openMenu();
 const closeMenuBtnClickHandler = () => {
-  if ( modalActive == true ) {
-    return false;
-  }  else {
+  if (  !modalCallMenu.classList.contains("modal--open") ||  !modalChatMenu.classList.contains("modal--open")) {
     closeMenu()
   }
 };
-const escapeKeyDowunClickHandler  = (evt) => {
-  if ( evt.keyCode == 27 && modalActive == false ) {
+const escapeKeyDownClickHandler  = (evt) => {
+  if ( evt.keyCode == 27 &&  !modalCallMenu.classList.contains("modal--open") &&  !modalChatMenu.classList.contains("modal--open")) {
     closeMenu()
   }
   else {
     return false;
   }
 }
-const overlayMenuClickHandler  = () => {  closeMenu() };
+const overlayMenuClickHandler  = () =>  closeMenu() ;
 
 
 
