@@ -3,7 +3,7 @@ const modalCallMenu = document.querySelector(".modal--call");
 const overlayModal =  document.querySelector(".overlay--modal");
 const openButtonsChatMenu = document.querySelectorAll(".icon--feedback");
 const openButtonsCallMenu = document.querySelectorAll(".icon--call");
-const closeButtonMenu= document.querySelectorAll(".modal > .icon--close-btn");
+const closeButtonMenu= document.querySelectorAll(".modal__close-btn");
 
 
 

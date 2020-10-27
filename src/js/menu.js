@@ -1,7 +1,7 @@
 const menu = document.querySelector(".menu");
 const overlayMenu =  document.querySelector(".overlay--menu");
 const openMenuBtn = document.querySelector(".header__burger-button ");
-const closeMenuBtn= document.querySelector(".menu__header-menu > .icon--close-btn");
+const closeMenuBtn= document.querySelector(".menu__header-menu");
 const modalChatMenu = document.querySelector(".modal--feedback");
 const modalCallMenu = document.querySelector(".modal--call");
 
@@ -29,9 +29,7 @@ const closeMenu = function () {
 
 const openMenuBtnClickHandler = () =>  openMenu();
 const closeMenuBtnClickHandler = () => {
-  if (!modalCallMenu.classList.contains("modal--open") || !modalChatMenu.classList.contains("modal--open")) {
     closeMenu()
-  }
 };
 const escapeKeyDownClickHandler = (evt) => {
   if ( evt.keyCode == 27 &&  !modalCallMenu.classList.contains("modal--open") &&  !modalChatMenu.classList.contains("modal--open")) {
